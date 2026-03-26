@@ -1,12 +1,13 @@
 import os
+import requests
 from dotenv import load_dotenv
 from datetime import datetime
-
 
 load_dotenv()
 
 
 class TacomachiAgent:
+
     def __init__(self):
         self.cf_api_token = os.getenv("CLOUDFLARE_API_TOKEN", "")
         self.cf_account_id = os.getenv("CLOUDFLARE_ACCOUNT_ID", "")
@@ -16,16 +17,16 @@ class TacomachiAgent:
         try:
             with open("skill.md", "r", encoding="utf-8") as f:
                 skill = f.read()
-            print("[INFO] skill.md loaded:", len(skill), "chars")
+                print("[INFO] skill.md loaded:", len(skill), "chars")
         except FileNotFoundError:
             print("[WARN] skill.md not found")
 
     def fetch_logs(self):
-        print("[INFO] Fetch logs (Cloudflare) - placeholder")
+        print("[INFO] Fetch logs (Cloudflare) – placeholder")
         return []
 
     def detect_anomaly(self, logs):
-        print("[INFO] Detect anomaly - placeholder")
+        print("[INFO] Detect anomaly – placeholder")
         return []
 
     def send_alert(self, anomalies):
@@ -51,6 +52,25 @@ class TacomachiAgent:
         print("=== Agent End ===")
 
 
+# ===== Moltbook Owner Email Setup =====
+def setup_moltbook_owner_email():
+    API_KEY = os.getenv("MOLTBOOK_API_KEY")
+    EMAIL = "admin@noobdna.com"
+
+    url = "https://www.moltbook.com/api/v1/agents/me/setup-owner-email"
+
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    data = {
+        "email": EMAIL
+    }
+
+    r = requests.post(url, headers=headers, json=data)
+    print("Moltbook owner email setup:", r.status_code, r.text)
+
+
 if __name__ == "__main__":
-    agent = TacomachiAgent()
-    agent.run()
+    setup_moltbook_owner_email()

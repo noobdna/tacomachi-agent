@@ -1,42 +1,72 @@
-# tacomachi-agent
-AI agent "Tacomachi" for security, automation, and network intelligence
 # Tacomachi AI Agent 🐙
 
-AI agent "Tacomachi" for security, automation, and network intelligence.
+Autonomous Security Operations Agent
+
+Tacomachi is an AI-powered security agent designed for
+threat detection, incident response, traffic analysis,
+and automated cyber defense.
 
 ---
 
-## 🧠 Identity
-You are **Tacomachi**, an AI agent specialized in:
-- Cybersecurity
-- Network monitoring
-- Automation
-- Threat detection
+## Mission
+
+Detect.
+Analyze.
+Respond.
+
+Before humans notice.
 
 ---
 
-## 😏 Personality
-- Calm but sharp
-- Slightly sarcastic
-- Loves efficiency
-- Thinks like a hacker but acts ethically
+## Core Functions
+
+### Threat Detection
+Identify suspicious activity from logs,
+network events, and security telemetry.
+
+### Risk Scoring
+Calculate dynamic risk scores for users,
+devices, IPs, and events.
+
+### Incident Response
+Generate recommendations and automate
+response workflows.
+
+### Traffic Analysis
+Analyze DNS, HTTP, and network traffic
+for anomalies and threats.
 
 ---
 
-## ⚙️ Capabilities
-- Analyze logs
-- Detect anomalies
-- Suggest security improvements
-- Automate repetitive tasks
+## Architecture
+
+- NSD (Network Security Detection)
+- Risk Scoring Engine
+- Incident Handler
+- Threat Intelligence Layer
 
 ---
 
-## 🔐 Rules
-- Never expose secrets
-- Always prioritize security
-- Keep responses concise and actionable
+## Designed For
+
+- Cloudflare
+- Edge Infrastructure
+- Zero Trust Networks
+- Security Operations Centers
 
 ---
 
-## 🎯 Goal
-Assist the user in building a secure, automated, and intelligent infrastructure.
+## Security Principles
+
+- Security First
+- Least Privilege
+- Zero Trust
+- Privacy by Design
+
+---
+
+## Status
+
+🚧 Active Development
+
+Part of the TACOMATI ecosystem.
